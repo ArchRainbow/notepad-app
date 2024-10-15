@@ -1,0 +1,25 @@
+.alert__container .MuiPaper-root {
+    background-color: #d4caec;
+    color: #232323;
+    font-size: 1.5rem;
+    font-family: var(--font-text);
+}
+
+.alert__container .MuiDialogTitle-root {
+    font-family: var(--font-text);
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 0.5rem 2rem;
+}
+
+.alert__container .MuiPaper-root .MuiDialogContent-root {
+    padding: 0.5rem 2rem 2rem;
+    border-top: var(--gray-border) 1px groove;
+}
+
+.alert__container .MuiDialogActions-root .MuiButton-contained {
+    background-color: #766ca7;
+}
+.alert__container .MuiDialogActions-root .MuiButton-contained:hover {
+    background-color: #a498de;
+}

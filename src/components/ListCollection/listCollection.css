@@ -1,0 +1,93 @@
+.collection__container {
+    max-height: 75%;
+}
+.collection__container, .collection__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.collection__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: var(--blue-base);
+    border-color: var(--gray-border);
+    border-width: 2px;
+    border-style: dashed;
+    border-radius: 1rem;
+    color: white;
+}
+.collection__header h3 {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 0;
+}
+.collection__header svg {
+    cursor: pointer;
+    font-size: 2rem;
+}
+.collection__icons {
+    display: flex;
+    gap: 0.5rem;
+}
+.collection__icons .MuiButtonBase-root {
+    padding: 0;
+    color: var(--white-icon);
+}
+.collection__header .add__icon:hover {
+    transition: 0.8s;
+    transform: rotate(90deg);
+}
+
+.collection__icons .expand__icon .MuiSvgIcon-root {
+    rotate: 0deg;
+    transition: rotate 0.25s ease-in-out;
+}
+.collection__icons .rotate .MuiSvgIcon-root {
+    rotate: -180deg;
+    transition: rotate 0.25s ease-in-out;
+}
+
+.collection__list {
+    overflow: auto;
+}
+
+.collection__menu .MuiPaper-root {
+    left: 0;
+    width: 90%;
+}
+.collection__menu .MuiPaper-root ul {
+    background-color: var(--lilac-card);
+    padding: 0;
+}
+.collection__menu .MuiPaper-root ul div {
+    border-bottom: #f0f8ff 2px solid;
+}
+
+.card__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--lilac-card);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.card__container:hover, .selected {
+    background-color: #a498de;
+}
+.card__container:hover .card__icon, .selected .card__icon {
+    color: var(--white-icon);
+}
+.card__container h3 {
+    font-family: var(--font-text);
+    font-size: 1.5rem;
+    color: #000;
+}
+.card__icon {
+    color: #484B6A;
+}

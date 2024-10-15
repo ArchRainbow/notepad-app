@@ -1,0 +1,107 @@
+.detail__container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+
+.page__detail {
+    width: 60px;
+    background: radial-gradient(#575450 6px, transparent 7px) repeat-y;
+    background-size: 30px 30px;
+    border-right: 3px solid #D44147;
+    box-sizing: border-box;
+}
+
+.note__content {
+    width: inherit;
+}
+
+.detail__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: inherit;
+    margin-top: 1rem;
+    border-bottom: var(--gray-border) 2px solid;
+}
+
+.list__title input {
+    font-family: var(--font-title);
+    font-size: 1.75rem;
+    color: #120f0f;
+    padding: 0;
+}
+
+.edit__icons, .action__icons, .edit__icons>*, .action__icons>* {
+    display: flex;
+    padding: 0.125rem;
+}
+.edit__icons svg, .action__icons svg {
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+.edit__icons>*:hover {
+    color: #83b2ff;
+}
+.action__icons>*:hover {
+    background-color: #cccccc;
+    border-radius: 50%;
+}
+.edit__icons svg:first-child, .action__icons svg:first-child {
+    color: #29557e;
+}
+.edit__icons svg:last-child, .action__icons svg:last-child {
+    color: #f02121;
+}
+
+.detail__container .MuiInputBase-root {
+    width: inherit;
+    line-height: 32px;
+    font-size: 20px;
+    font-family: var(--font-text);
+    max-height: 85%;
+}
+
+.list__content {
+    display: flex;
+    flex-direction: column;
+    background: repeating-linear-gradient(transparent, transparent 31px, #83b2ff 31px, #83b2ff 32px);
+    border: none;
+    width: inherit;
+    height: -webkit-fill-available;
+    overflow: scroll;
+    line-height: 32px;
+    font-size: 20px;
+    font-family: var(--font-text);
+    max-height: 85%;
+    resize: none;
+}
+.list__content:focus-visible {
+    outline: none;
+}
+
+
+.detail__items {
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .detail__container {
+        max-height: 75%;
+    }
+
+    .list__title input {
+        font-size: 2rem;
+    }
+
+    .edit__icons svg, .action__icons svg {
+        font-size: 2.5rem;
+    }
+}
