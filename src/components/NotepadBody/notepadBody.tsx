@@ -15,13 +15,13 @@ const mockData: ListData[] = [
   },
   {
     id: 1,
-    listName: "29 Crack",
-    content: "Buying stuff with unexistent money can lead to ruin. Go figure",
+    listName: "WWI",
+    content: "Why do you call it WWI? Ohh, you'll see",
   },
   {
     id: 2,
     listName: "Coffee",
-    content: "craving milk with coffee right now",
+    content: "list of steps to brew a good cup of coffee",
   },
 ];
 
