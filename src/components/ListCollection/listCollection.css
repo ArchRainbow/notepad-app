@@ -1,5 +1,5 @@
 .collection__container {
-    max-height: 75%;
+    max-height: 80vh;
 }
 .collection__container, .collection__list {
     display: flex;
@@ -12,7 +12,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
-    background-color: var(--blue-base);
+    background-color: var(--collection-header);
     border-color: var(--gray-border);
     border-width: 2px;
     border-style: dashed;
@@ -73,12 +73,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: var(--lilac-card);
+    background-color: var(--color-card);
     border-radius: 0.5rem;
     cursor: pointer;
 }
 .card__container:hover, .selected {
-    background-color: #a498de;
+    background-color: var(--hover-color);
 }
 .card__container:hover .card__icon, .selected .card__icon {
     color: var(--white-icon);
@@ -86,8 +86,9 @@
 .card__container h3 {
     font-family: var(--font-text);
     font-size: 1.5rem;
-    color: #000;
+    letter-spacing: 1px;
+    color: var(--card-text);
 }
 .card__icon {
-    color: #484B6A;
+    color: var(--card-icon);
 }

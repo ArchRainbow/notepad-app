@@ -5,8 +5,7 @@
     padding: 1rem;
     width: 100%;
     height: 100%;
-
-    background: #fafafa;
+    background-color: var(--note-color);
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,.3);
 }
@@ -20,6 +19,8 @@
 }
 
 .note__content {
+    display: flex;
+    flex-direction: column;
     width: inherit;
 }
 
@@ -35,7 +36,7 @@
 .list__title input {
     font-family: var(--font-title);
     font-size: 1.75rem;
-    color: #120f0f;
+    color: var(--card-text);
     padding: 0;
 }
 
@@ -61,32 +62,25 @@
     color: #f02121;
 }
 
-.detail__container .MuiInputBase-root {
-    width: inherit;
-    line-height: 32px;
-    font-size: 20px;
-    font-family: var(--font-text);
-    max-height: 85%;
-}
 
 .list__content {
-    display: flex;
-    flex-direction: column;
     background: repeating-linear-gradient(transparent, transparent 31px, #83b2ff 31px, #83b2ff 32px);
-    border: none;
+    background-attachment: local;
     width: inherit;
     height: -webkit-fill-available;
-    overflow: scroll;
+    overflow: auto;
+    color: var(--card-text);
     line-height: 32px;
-    font-size: 20px;
+    font-size: 22px;
     font-family: var(--font-text);
-    max-height: 85%;
+    /* max-height: 85%; */
+    height: 100%;
+    border: none;
     resize: none;
 }
 .list__content:focus-visible {
     outline: none;
 }
-
 
 .detail__items {
     margin: 0;
@@ -94,7 +88,7 @@
 
 @media screen and (min-width: 768px) {
     .detail__container {
-        max-height: 75%;
+        max-height: 75vh;
     }
 
     .list__title input {

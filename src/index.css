@@ -1,9 +1,5 @@
 :root {
-  --font-title: 'Croissant One', 'sans-serif';
-  --font-text: 'Mooli', sans-serif;
   --white-icon: #f2f7f2;
-  --purple-base: #2b244b;
-  --blue-base: #224674;
   --lilac-card: #AEA9BA;
   --gray-border: #88958d;
 }
@@ -14,11 +10,87 @@
   margin: 0;
 }
 
+[data-font="standard"] {
+  --font-title: 'Croissant One', 'sans-serif';
+  --font-text: 'Mooli', sans-serif;
+}
+
+[data-font="halloween"] {
+  --font-title: "Rubik Wet Paint", serif;
+  --font-text: "Henny Penny", system-ui;
+}
+
+[data-font="handwritten"] {
+  --font-title: "Homemade Apple", cursive;
+  --font-text: "Caveat", cursive;
+}
+
+[data-theme="light"] {
+  --color-bg: #efedf6;
+  --header-bg: #2b244b;
+  --collection-header: #224674;
+  --color-card: #AEA9BA;
+  --hover-color: #a498de;
+  --card-text: #000;
+  --card-icon: #484B6A;
+  --note-color: #fafafa;
+  --popup-color: #e7deff;
+  
+}
+
+[data-theme="dark"] {
+  --color-bg: #060325;
+  --header-bg: #041932;
+  --collection-header: #0F2B4D;
+  --color-card: #4d72bc;
+  --hover-color: #7a64e2;
+  --card-text: #f5f5f5;
+  --card-icon: #21043d;
+  --note-color: #163353;
+  --popup-color: #1b506e;
+}
+
+[data-theme="coral"] {
+  --color-bg: #ffebd0;
+  --header-bg: #f26659;
+  --collection-header: #8ca9d3;
+  --color-card: #d5f69f;
+  --hover-color: #C0EF73;
+  --card-text: #350500;
+  --card-icon: #6b9a24;
+  /* --note-color: ; */
+  --popup-color: #ffe6c2;
+}
+
+[data-theme="autumn"] {
+  --color-bg: #FFB79F;
+  --header-bg: #712e1e;
+  --collection-header: #b16857;
+  --color-card: #F7B538;
+  --hover-color: #ffac0d;
+  --card-text: #43190f;
+  --card-icon: #395f70;
+  --note-color: #F1DCA7;
+  --popup-color: #eed7c5;
+}
+
+[data-theme="halloween"] {
+  --color-bg: #363039;
+  --header-bg: #FB6F2D;
+  --collection-header: #872FE0;
+  --color-card: #89E031;
+  --hover-color: #c2ff84;
+  --card-text: #5a2006;
+  --card-icon: #5c00b8;
+  --note-color: #ffdd92;
+  --popup-color: #ffc341;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #efedf6;
+  background-color: var(--color-bg);
   padding: 0 2rem;
 }
 
