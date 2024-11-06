@@ -1,11 +1,13 @@
+import { useState, MouseEvent } from "react";
 import { SettingsOutlined } from "@mui/icons-material";
 import ListCollection from "../ListCollection/listCollection";
 import "./notepadBody.css";
 import ListDetail from "../ListDetail/listDetail";
-import { useState } from "react";
-import empty from "../../app/empty.jpg";
+import empty from "../../app/empty.png";
 import Alert from "../Alert/alert";
 import { AlertData, ListData } from "../../models/types.model";
+import { IconButton } from "@mui/material";
+import SettingsMenu from "./Settings/settings";
 
 const mockData: ListData[] = [
   {
@@ -30,6 +32,7 @@ function NotepadBody() {
   const [notes, setNotes] = useState<ListData[]>(mockData);
   const [noteTitle, setNoteTitle] = useState("");
   const [noteContent, setNoteContent] = useState("");
+  const [title, setTitle] = useState("Len's Notepad");
 
   const [toEdit, setToEdit] = useState(false);
   const [createNew, setCreateNew] = useState(false);
@@ -39,6 +42,9 @@ function NotepadBody() {
     alertType: -1,
     onProceedAction: () => {},
   });
+
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const openMenu = Boolean(anchorEl);
 
   const isEditable = toEdit || createNew;
 
@@ -114,14 +120,20 @@ function NotepadBody() {
     setSelectedNote(-1);
   };
 
+  const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+
   return (
     <>
       <div className="notepad__container">
         <div className="notepad__header">
-          <h1>Len's Notepad</h1>
+          <h1>{title}</h1>
           <div className="header__icons">
-            {/* TO DO: Settings menu*/}
-            <SettingsOutlined />
+            <IconButton title="Settings menu" onClick={handleClick}>
+              <SettingsOutlined />
+            </IconButton>
           </div>
         </div>
         <div className="notepad__content">
@@ -148,9 +160,18 @@ function NotepadBody() {
             </div>
           )}
         </div>
-        <footer className="footer__container">Copyright</footer>
+        <footer className="footer__container">2024 - Karen Funes</footer>
       </div>
       {openAlert && <Alert setOpenAlert={setOpenAlert} items={alertItems} />}
+      {openMenu && (
+        <SettingsMenu
+          title={title}
+          setTitle={setTitle}
+          openMenu={openMenu}
+          anchorElement={anchorEl}
+          setAnchorEl={setAnchorEl}
+        />
+      )}
     </>
   );
 }

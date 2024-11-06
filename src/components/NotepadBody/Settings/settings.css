@@ -1,0 +1,50 @@
+.settings__menu .MuiPaper-root {
+    background-color: var(--popup-color);
+    color: var(--card-text);
+    max-width: 20rem;
+    width: 85vw;
+}
+
+.settings__menu .MuiPaper-root .MuiList-root {
+    padding: 1rem;
+}
+
+.MuiList-root .edit__button {
+    color: var(--card-text);
+    border-color: var(--collection-header);
+}
+.MuiList-root .edit__button:hover {
+    border-color: var(--hover-color);
+}
+.edit__button .MuiButton-icon {
+    color: var(--collection-header);
+}
+
+
+.font__settings, .scheme__settings h4 {
+    font-family: var(--font-text);
+    color: #0b0b0b;
+}
+
+.font__settings, .scheme__settings {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.font__settings .MuiToggleButtonGroup-root .MuiButtonBase-root {
+    color: var(--card-text);
+}
+
+.schemes__toggle .MuiButtonBase-root {
+    justify-content: flex-start;
+    gap: 0.5rem;
+    color: var(--card-text);
+}
+
+@media screen and (min-width: 768px) {
+    .settings__menu .MuiPaper-root {
+        width: 20rem;
+    }
+}

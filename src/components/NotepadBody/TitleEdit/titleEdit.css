@@ -1,0 +1,25 @@
+.edit__container .MuiPaper-root {
+    background-color: var(--popup-color);
+    color: var(--card-text);
+    font-size: 1.5rem;
+    font-family: var(--font-text);
+}
+
+.edit__container .MuiDialogTitle-root {
+    font-family: var(--font-text);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.edit__container .MuiDialogActions-root .MuiButton-textError {
+    color: #590000;
+    font-weight: 600;
+}
+
+.edit__container .MuiDialogActions-root .MuiButton-contained {
+    background-color: var(--color-card);
+    color: var(--card-text);
+}
+.edit__container .MuiDialogActions-root .MuiButton-contained:hover {
+    background-color: var(--hover-color);
+}
