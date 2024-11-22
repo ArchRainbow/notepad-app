@@ -73,7 +73,6 @@
     line-height: 32px;
     font-size: 22px;
     font-family: var(--font-text);
-    /* max-height: 85%; */
     height: 100%;
     border: none;
     resize: none;
