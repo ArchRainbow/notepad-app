@@ -2,11 +2,21 @@
 
 This is a React practice notepad project to help build up a portfolio. 
 
-As it is now (version 1), this note taking page allows the user to create, edit and delete notes. There are also alerts for when the user tries to delete a note, when they attempt to cancel an edit, when they try to save an empty note, etc. 
+On its first stage (version 1), this note taking page allowed the user to create, edit and delete notes. There are also alerts for when the user tries to delete a note, when they attempt to cancel an edit, when they try to save an empty note, etc. 
+
+## Version 2
+
+The updated version includes the following features:
+
+- Settings menu containing:
+    - Toggle between light/dark and other color schemes
+    - More font types
+    - Edit the title
+
 
 ## Demo
 
-You can check the current version (v1) of the notepad app on this link: \
+You can check the current version (v2) of the notepad app on this link: \
 https://note-taking-webpage.netlify.app/
 
 
@@ -19,13 +29,4 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-
-## Status
-
-The project is in its first stage. Following version will have:
-
-- Settings menu which would include:
-    - Light/dark mode toggle
-    - Color schemes
-    - More font types/sizes
 
